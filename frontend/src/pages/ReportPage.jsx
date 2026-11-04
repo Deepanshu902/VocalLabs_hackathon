@@ -34,7 +34,14 @@ function EmailModal({ sessionId, onClose }) {
         setMessage('Scorecard sent! Check your inbox.');
       } else {
         setStatus('failed');
-        setMessage(`Email not sent: ${res.error || 'SMTP not configured'}`);
+        const err = res.error || '';
+        if (/timeout|ETIMEDOUT|ECONNREFUSED|ESOCKET/i.test(err)) {
+          setMessage('Email not sent: the free Render host blocks SMTP (email works when run locally). Scorecard is still saved.');
+        } else if (err) {
+          setMessage(`Email not sent: ${err}`);
+        } else {
+          setMessage('Email not sent: SMTP is not configured on the server.');
+        }
       }
     } catch (err) {
       setStatus('failed');
