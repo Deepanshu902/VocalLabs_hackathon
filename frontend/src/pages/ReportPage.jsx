@@ -34,7 +34,7 @@ function EmailModal({ sessionId, onClose }) {
         setMessage('Scorecard sent! Check your inbox.');
       } else {
         setStatus('failed');
-        setMessage('Email could not be sent (SMTP not configured). Your scorecard was logged to the server console.');
+        setMessage(`Email not sent: ${res.error || 'SMTP not configured'}`);
       }
     } catch (err) {
       setStatus('failed');
