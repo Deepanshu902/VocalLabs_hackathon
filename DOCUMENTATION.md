@@ -2,7 +2,7 @@
 
 **Author:** Deepanshu (solo), final-year B.E. CSE, Panchkula
 **Event:** Voice AI Hackathon (6 hours, solo) — PDF track: *Debate and pitch practice partner*
-**GitHub:** `<ADD GITHUB URL HERE>`  |  **Live URL:** `<ADD LIVE URL HERE>`
+**GitHub:** `https://github.com/Deepanshu902/VocalLabs_hackathon`  |  **Live URL:** `https://vocal-labs-hackathon.vercel.app/`
 
 ---
 
